@@ -44,6 +44,7 @@ import MenuItem from "../../components/menu-item/menu-item.component"
                   linkUrl: 'shop/mens'
                 }
                 
+                
               ]
         }
     }
