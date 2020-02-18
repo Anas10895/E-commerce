@@ -1,5 +1,7 @@
 import React from 'react'
 import FormInput from "../form/form-input.component"
+import CustomButton from '../custom-button/custom-button.component'
+
 class SignUp extends React.Component {
     constructor(props){
         super(props);
@@ -41,7 +43,7 @@ class SignUp extends React.Component {
 
             <FormInput name="password" label="Confirm Password" type="password" value={this.state.password} onChange={this.handleChange} required></FormInput>
 
-            <input type="submit" value="submit"/>
+            <CustomButton type="submit">Sign Up </CustomButton>
             </form>     
             </div>
         )
