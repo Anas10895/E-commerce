@@ -5,7 +5,7 @@ import SignUp from "../sign-up/sign-up.component"
 const SignInAndSignUp = () => {
     return <div className="sign-in-and-sign-up">
 <SignIn/>
-{/* <SignUp/> */}
+<SignUp/>
     </div>
 }
 export default SignInAndSignUp;

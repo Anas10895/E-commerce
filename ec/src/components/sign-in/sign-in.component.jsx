@@ -27,7 +27,6 @@ class SignIn extends React.Component {
         this.setState({[name]: value})
     }
     render() {
-        console.log(this.state)
         return (
           <div className="sign-in" onSubmit={this.handleSubmit}>
             <h2>I alredy have an account</h2>
