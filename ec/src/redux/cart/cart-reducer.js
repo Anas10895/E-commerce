@@ -1,7 +1,9 @@
 import {CartAcionType} from './cart-type'
 
 const initalValue = {
-    hiddin: true
+    hiddin: true,
+    cartItems :[],
+
 }
 
 const cartReducer = ( state = initalValue , action) => {
@@ -12,6 +14,13 @@ const cartReducer = ( state = initalValue , action) => {
             hiddin: !state.hiddin
 
         }
+        case CartAcionType.AddItem:
+            return {
+                ...state , 
+                cartItems :[...state.cartItems, action.pauload],
+
+    
+            }
 
         default : return state
     }
