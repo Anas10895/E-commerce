@@ -5,6 +5,10 @@ import {ReactComponent as Logo} from "../../assets/crown.svg"
 import {connect} from 'react-redux'
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart-dropdown/cart-dropdown.compnent'
+import {createStructuredSelector} from 'reselect'
+import {selectCartIHidden} from '../../redux/cart/cart.selector'
+import {selectCurrentUser} from '../../redux/user/user.selectors'
+
 import "./header.styles.scss"
 
 const Header = ({currentUser, hiddin }) => { 
@@ -40,9 +44,9 @@ const Header = ({currentUser, hiddin }) => {
     </div>
 } 
 //how to distruct nested values 
-const mapStateToProps = ({user: {currentUser} ,cart:{hiddin} }) => ({
-currentUser ,
-hiddin
-})
+const mapStateToProps = createStructuredSelector ({
+currentUser: selectCurrentUser ,
+hiddin:selectCartIHidden
+});
 
 export default connect(mapStateToProps)(Header);
